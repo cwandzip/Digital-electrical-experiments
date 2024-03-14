@@ -1,0 +1,20 @@
+top.o: \
+ /home/lhjysyx/DigitalCircuitsExperiments/exp7/keyboard/csrc/top.cpp \
+ /usr/local/share/verilator/include/verilated.h \
+ /usr/local/share/verilator/include/verilatedos.h \
+ /usr/local/share/verilator/include/verilated_config.h \
+ /usr/local/share/verilator/include/verilated_types.h \
+ /usr/local/share/verilator/include/verilated_funcs.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/nvboard.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/configs.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/constrs.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/render.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/component.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/vga.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/keyboard.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/at_scancode.h \
+ /home/lhjysyx/ysyx-workbench/nvboard/include/macro.h \
+ /usr/local/share/verilator/include/verilated_vcd_c.h \
+ /usr/local/share/verilator/include/verilated.h \
+ /usr/local/share/verilator/include/verilated_trace.h \
+ /usr/local/share/verilator/include/verilated_trace_defs.h Vtop.h
