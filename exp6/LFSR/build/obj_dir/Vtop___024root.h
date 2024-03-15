@@ -19,7 +19,6 @@ class Vtop___024root final : public VerilatedModule {
     VL_OUT8(out0,7,0);
     VL_OUT8(out1,7,0);
     CData/*0:0*/ top__DOT__lfsr0__DOT__h_lfsr;
-    CData/*0:0*/ top__DOT__lfsr0__DOT__allzero;
     CData/*7:0*/ top__DOT__lfsr0__DOT__lfsrreg;
     CData/*0:0*/ __Vtrigrprev__TOP__clk;
     CData/*0:0*/ __VactContinue;

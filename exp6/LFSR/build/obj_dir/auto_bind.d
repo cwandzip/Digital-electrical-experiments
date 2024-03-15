@@ -1,5 +1,5 @@
 auto_bind.o: \
- /home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/build/auto_bind.cpp \
+ /home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/build/auto_bind.cpp \
  /home/lhjysyx/ysyx-workbench/nvboard/include/nvboard.h \
  /home/lhjysyx/ysyx-workbench/nvboard/include/configs.h \
  /home/lhjysyx/ysyx-workbench/nvboard/include/constrs.h \

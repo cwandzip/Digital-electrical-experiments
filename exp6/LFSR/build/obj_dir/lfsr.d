@@ -1,4 +1,4 @@
-lfsr.o: /home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/csrc/lfsr.cpp \
+lfsr.o: /home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/csrc/lfsr.cpp \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilatedos.h \
  /usr/local/share/verilator/include/verilated_config.h \

@@ -24,24 +24,20 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     CData/*3:0*/ __Vtableidx2;
     __Vtableidx2 = 0;
     // Body
-    if (vlSelf->en) {
-        vlSelf->top__DOT__lfsr0__DOT__allzero = (1U 
-                                                 & (~ (IData)(
-                                                              (0U 
-                                                               != (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg)))));
-        vlSelf->top__DOT__lfsr0__DOT__h_lfsr = (1U 
-                                                & (VL_REDXOR_8(
-                                                               (0x1dU 
-                                                                & (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg))) 
-                                                   ^ (IData)(vlSelf->top__DOT__lfsr0__DOT__allzero)));
-        vlSelf->top__DOT__lfsr0__DOT__lfsrreg = (((IData)(vlSelf->top__DOT__lfsr0__DOT__h_lfsr) 
+    vlSelf->top__DOT__lfsr0__DOT__lfsrreg = ((IData)(vlSelf->en)
+                                              ? (((IData)(vlSelf->top__DOT__lfsr0__DOT__h_lfsr) 
                                                   << 7U) 
                                                  | (0x7fU 
                                                     & ((IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg) 
-                                                       >> 1U)));
-    } else {
-        vlSelf->top__DOT__lfsr0__DOT__lfsrreg = vlSelf->in;
-    }
+                                                       >> 1U)))
+                                              : (IData)(vlSelf->in));
+    vlSelf->top__DOT__lfsr0__DOT__h_lfsr = (1U & (VL_REDXOR_8(
+                                                              (0x1dU 
+                                                               & (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg))) 
+                                                  ^ 
+                                                  (~ (IData)(
+                                                             (0U 
+                                                              != (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg))))));
     __Vtableidx1 = (0xfU & (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg));
     vlSelf->out0 = Vtop__ConstPool__TABLE_h1caffb71_0
         [__Vtableidx1];
@@ -95,7 +91,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                     Vtop___024root___dump_triggers__act(vlSelf);
 #endif
-                    VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/vsrc/top.v", 1, "", "Active region did not converge.");
+                    VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/vsrc/top.v", 1, "", "Active region did not converge.");
                 }
                 vlSelf->__VactIterCount = ((IData)(1U) 
                                            + vlSelf->__VactIterCount);
@@ -110,7 +106,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__nba(vlSelf);
 #endif
-                VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/vsrc/top.v", 1, "", "NBA region did not converge.");
+                VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/vsrc/top.v", 1, "", "NBA region did not converge.");
             }
             __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
             Vtop___024root___eval_nba(vlSelf);

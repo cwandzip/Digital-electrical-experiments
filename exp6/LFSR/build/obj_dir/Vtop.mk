@@ -4,7 +4,7 @@
 # Execute this makefile from the object directory:
 #    make -f Vtop.mk
 
-default: /home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/build/top
+default: /home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/build/top
 
 ### Constants...
 # Perl executable (from $PERL)
@@ -51,8 +51,8 @@ VM_USER_CLASSES = \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/build \
-	/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/csrc \
+	/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/build \
+	/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/csrc \
 
 
 ### Default rules...
@@ -64,13 +64,13 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-auto_bind.o: /home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/build/auto_bind.cpp
+auto_bind.o: /home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/build/auto_bind.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-lfsr.o: /home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/csrc/lfsr.cpp
+lfsr.o: /home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/csrc/lfsr.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/build/top: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/build/top: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
 	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
 
 

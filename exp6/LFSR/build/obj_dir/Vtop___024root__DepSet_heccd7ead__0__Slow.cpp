@@ -50,7 +50,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__stl(vlSelf);
 #endif
-                VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp4/LFSR/vsrc/top.v", 1, "", "Settle region did not converge.");
+                VL_FATAL_MT("/home/lhjysyx/DigitalCircuitsExperiments/exp6/LFSR/vsrc/top.v", 1, "", "Settle region did not converge.");
             }
             vlSelf->__VstlIterCount = ((IData)(1U) 
                                        + vlSelf->__VstlIterCount);
@@ -86,6 +86,13 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     CData/*3:0*/ __Vtableidx2;
     __Vtableidx2 = 0;
     // Body
+    vlSelf->top__DOT__lfsr0__DOT__h_lfsr = (1U & (VL_REDXOR_8(
+                                                              (0x1dU 
+                                                               & (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg))) 
+                                                  ^ 
+                                                  (~ (IData)(
+                                                             (0U 
+                                                              != (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg))))));
     __Vtableidx1 = (0xfU & (IData)(vlSelf->top__DOT__lfsr0__DOT__lfsrreg));
     vlSelf->out0 = Vtop__ConstPool__TABLE_h1caffb71_0
         [__Vtableidx1];
@@ -146,7 +153,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->out0 = VL_RAND_RESET_I(8);
     vlSelf->out1 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__lfsr0__DOT__h_lfsr = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__lfsr0__DOT__allzero = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__lfsr0__DOT__lfsrreg = VL_RAND_RESET_I(8);
     vlSelf->__Vtrigrprev__TOP__clk = VL_RAND_RESET_I(1);
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
